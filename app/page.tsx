@@ -2,10 +2,10 @@ import Feed from "@components/Feed";
 
 const Home = () => {
   return (
-    <section className="w-full flex flex-col justify-center items-center gap-7 pt-10">
-      <h1 className="text-center font-extrabold text-5xl ">
+    <section className="w-full flex flex-col justify-center items-center gap-8 pt-10">
+      <h1 className="text-center font-extrabold text-5xl mb-2 ">
         Discover & Share
-        <br className="max-md:hidden" />
+        <br className="" />
         <span className="orange_gradient text-6xl text-center font-bold">
           Your Favorite Quotes
         </span>

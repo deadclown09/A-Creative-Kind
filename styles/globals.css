@@ -7,6 +7,9 @@
 /* 
   Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
 */
+* {
+  font-family: Inter;
+}
 
 .main {
   width: 100vw;
@@ -77,20 +80,32 @@
   @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
 }
 
+/* Components styling */
+
 .black_btn {
-  @apply rounded-full border border-black bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm font-inter flex items-center justify-center;
+  @apply flex justify-center items-center border border-primary-black bg-primary-black text-white py-1.5 px-4 rounded-full hover:bg-transparent hover:text-primary-black font-medium transition-all;
 }
 
 .outline_btn {
-  @apply rounded-full border border-black bg-transparent py-1.5 px-5 text-black transition-all hover:bg-black hover:text-white text-center text-sm font-inter flex items-center justify-center;
+  @apply flex justify-center items-center border border-primary-black bg-transparent text-primary-black hover:bg-primary-black hover:text-white rounded-full py-1.5 px-4 font-medium transition-all;
+}
+
+.dropdown {
+  @apply absolute flex flex-col items-end justify-center bg-slate-100 top-full right-0 min-w-[200px] mt-3 p-5 gap-2 rounded-lg;
+}
+
+.dropdown_link {
+  @apply text-base font-inter text-gray-700 hover:text-gray-500 font-medium;
+}
+
+/* Design & Styling */
+
+.orange_gradient {
+  @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
 }
 
 .head_text {
   @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;
-}
-
-.orange_gradient {
-  @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
 }
 
 .green_gradient {
@@ -138,14 +153,6 @@
 /* Nav Component */
 .logo_text {
   @apply max-sm:hidden font-satoshi font-semibold text-lg text-black tracking-wide;
-}
-
-.dropdown {
-  @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-end items-end;
-}
-
-.dropdown_link {
-  @apply text-sm font-inter text-gray-700 hover:text-gray-500 font-medium;
 }
 
 /* PromptCard Component */
