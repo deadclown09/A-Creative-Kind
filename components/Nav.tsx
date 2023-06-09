@@ -14,8 +14,8 @@ import {
 import { BuiltInProviderType } from "next-auth/providers";
 
 const Nav = () => {
-  const [isUserLoggedIn, setIsUserLoggedIn] = useState(true);
   const [mobileNav, setMobileNav] = useState(false);
+  const { data: session } = useSession();
 
   const [authProviders, setAuthProviders] = useState<Record<
     LiteralUnion<BuiltInProviderType>,
@@ -47,7 +47,7 @@ const Nav = () => {
 
       {/* Desktop navigation */}
       <div className="sm:flex hidden">
-        {isUserLoggedIn ? (
+        {session?.user ? (
           <div className="flex justify-center items-center gap-3">
             <Link href="/create-post">
               <button className="black_btn">Create Post</button>
@@ -59,10 +59,11 @@ const Nav = () => {
 
             <Link href="/profile">
               <Image
-                src="/assets/images/logo.svg"
+                src={session.user.image || "/assets/images/profile.svg"}
                 alt="User profile"
                 height={37}
                 width={37}
+                className="rounded-full"
               />
             </Link>
           </div>
@@ -85,13 +86,14 @@ const Nav = () => {
 
       {/* Mobile navigation */}
       <div className="sm:hidden flex relative">
-        {isUserLoggedIn ? (
+        {session?.user ? (
           <div className="flex justify-center items-center">
             <Image
-              src="/assets/images/logo.svg"
+              src={session.user.image || "/assets/images/profile.svg"}
               alt="User profile"
               height={37}
               width={37}
+              className="rounded-full"
               onClick={() => setMobileNav((prev) => !prev)}
             />
 

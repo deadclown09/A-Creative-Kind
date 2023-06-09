@@ -1,6 +1,6 @@
 import { Schema, models, model } from 'mongoose'
 
-const UserSchema = newSchema({
+const UserSchema = new Schema({
     email: {
         type: String,
         unique: [true, 'Email already exists!'],
@@ -9,7 +9,7 @@ const UserSchema = newSchema({
     username: {
         type: String,
         required: [true, 'Username is required!'],
-        match: [/^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/, 'Invalid username: it must containe 8 - 20 alphanumeric letters and must be unique']
+        // match: [String, 'Invalid username: it must containe 8 - 20 alphanumeric letters and must be unique']
     }
 })
 
