@@ -53,7 +53,9 @@ const Nav = () => {
               <button className="black_btn">Create Post</button>
             </Link>
 
-            <button className="outline_btn">Sign out</button>
+            <button className="outline_btn" onClick={() => signOut()}>
+              Sign out
+            </button>
 
             <Link href="/profile">
               <Image
@@ -68,7 +70,12 @@ const Nav = () => {
           <>
             {authProviders &&
               Object.values(authProviders).map((provider) => (
-                <button type="button" key={provider.name} className="black_btn">
+                <button
+                  type="button"
+                  key={provider.name}
+                  className="black_btn"
+                  onClick={() => signIn(provider.id)}
+                >
                   Sign in
                 </button>
               ))}
@@ -106,7 +113,10 @@ const Nav = () => {
                 </Link>
                 <button
                   className="black_btn mt-2 w-full"
-                  onClick={() => setMobileNav(false)}
+                  onClick={() => {
+                    setMobileNav(false);
+                    signOut();
+                  }}
                 >
                   Sign out
                 </button>
@@ -117,7 +127,15 @@ const Nav = () => {
           <>
             {authProviders &&
               Object.values(authProviders).map((provider) => (
-                <button type="button" key={provider.name} className="black_btn">
+                <button
+                  type="button"
+                  key={provider.name}
+                  className="black_btn"
+                  onClick={() => {
+                    setMobileNav(false);
+                    signIn(provider.id);
+                  }}
+                >
                   Sign in
                 </button>
               ))}
