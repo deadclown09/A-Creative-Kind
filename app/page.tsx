@@ -10,7 +10,7 @@ const Home = () => {
           Your Favorite Quotes
         </span>
       </h1>
-      <p className="text-2xl text-center text-primary-black">
+      <p className="text-lg text-center text-primary-black">
         <span className="orange_gradient font-medium">A CREATIVE KIND</span> is
         a common place for all creative minds like you and me where we all share
         with each other our personal favorites quotes with people like you.
