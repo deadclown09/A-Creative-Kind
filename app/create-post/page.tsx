@@ -37,7 +37,7 @@ const CreatePost = () => {
   };
 
   return (
-    <div className="flex flex-col items-start justify-start gap-6 p-5 w-full">
+    <section className="flex flex-col items-start justify-start gap-6 p-5 w-full">
       <h1 className="blue_gradient text-5xl font-extrabold">Create Post</h1>
       <p className="text-xl text-primary-black">
         Share here the quote you have in mind before you forget it. Also don't
@@ -52,7 +52,7 @@ const CreatePost = () => {
         setLoading={setLoading}
         handleSubmit={createPost}
       ></Form>
-    </div>
+    </section>
   );
 };
 
