@@ -1,0 +1,236 @@
+//TODO: CREATE A MD FILE FROM THIS TO DECORATE AND DO THE HIGHLIGHTING. CURRENTLY, IT DOESN'T LOOK SO GOOD
+----------------------------------------------------------------------------------------------------------
+
+VIDEO LINK: https://www.youtube.com/watch?v=wm5gMKuwSYk&t=7219s
+---------------------------------------------------------------
+
+Learn about the importance of staying informed on advancements in AI and web development, particularly with the rise of Next.js. Get a free eBook to become a professional Next.js developer and take advantage of the increasing job opportunities. Many big companies have already adopted Next.js, indicating its growing popularity. Build your own modern Next.js full-stack application to showcase your skills.
+
+[00:00]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=0)
+Next.js simplifies web development and improves SEO
+
+[07:54]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=474)
+Next.js automates several functions, allowing developers to focus on writing React code.
+
+[21:47]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=1307)
+Use server-side components for fetching data and client-side components for interactivity.
+
+[28:29]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=1709)
+Learn about Next.js data fetching and serverless route handlers
+
+[41:51]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=2511)
+Build a full stack Next.js13 CRUD application called Primetopia
+
+[48:13]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=2893)
+Setting up the layout and home page for a React application
+
+[1:01:28]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=3688)
+Adding use client directive and styling logo
+
+[1:07:53]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=4073)
+Create mobile navigation bar with profile icon and links
+
+[1:21:10]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=4870)
+Create OAuth client ID and secret for Google authentication
+
+[1:28:00]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=5280)
+Create a MongoDB database and connect to it in a Next.js app
+
+[1:41:00]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=6060)
+Successfully set up Next API authentication with Google
+
+[1:47:45]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=6465)
+Creating a create prompt page
+
+[2:01:14]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=7274)
+Create a new API endpoint for prompts
+
+[2:07:38]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=7658)
+Successfully created a new prompt in the database
+
+[2:20:43]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=8443)
+Creating and fetching prompts using xjs
+
+[2:27:39]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=8859)
+Implementing copy to clipboard functionality
+
+[2:40:50]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=9650)
+Developed profile component with live reload functionality
+
+[2:47:17]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=10037)
+Adding API endpoints for edit and delete
+
+[3:00:41]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=10841)
+Successfully implemented full CRUD functionality for posts
+
+[00:24]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=24)
+Learn how to implement search, click on tags, and view other profiles in a JSM masterclass project.
+
+[3:19:33]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=11973)
+Share your work online to gain recognition and job opportunities.
+
+[3:25:41]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=12341)
+Explore JS13 and React/Next.js courses on jsmastery.pro
+
+---------------------------------
+
+Detailed Summary for [Next.js 13 Full Course 2023 | Build and Deploy a Full Stack App Using the Official React Framework]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk)
+by [Merlin]
+(https://merlin.foyer.work/)
+
+[00:00]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=0)
+Next.js simplifies web development and improves SEO
+- Next.js offers flexible rendering options for improved SEO
+- File-based routing system in Next.js simplifies route creation
+
+[07:54]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=474)
+Next.js automates several functions, allowing developers to focus on writing React code.
+- Serverless APIs in Next.js allow for creating API endpoints without managing server infrastructure.
+- Next.js uses automatic code splitting by default to split pages into separate chunks, resulting in faster subsequent page navigations.
+
+[21:47]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=1307)
+Use server-side components for fetching data and client-side components for interactivity.
+- Server-side components should be used for fetching data like articles, blog posts, or website data.
+- Client-side components should be used for interactivity or event listeners, such as on click or on change.
+
+[28:29]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=1709)
+Learn about Next.js data fetching and serverless route handlers
+- Next.js provides three data fetching options: server side rendering, static site generation, and incremental static generation
+- Next.js allows for full stack development with serverless route handlers, handling HTTP requests and back-end functionality without an external server
+
+[41:51]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=2511)
+Build a full stack Next.js13 CRUD application called Primetopia
+- Primetopia is an open source AI prompting tool that helps you discover, create, and share creative prompts
+- The application allows you to search for tags, usernames, and prompt content, and edit or delete prompts
+
+[48:13]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=2893)
+Setting up the layout and home page for a React application
+- Copy the contents of globals.css to a new file in the styles folder and download and unzip the assets folder into the public folder
+- Create a page.jsx file for the home page and a layout.jsx file for the overall layout, import ADD Styles from globals.css in layout.jsx, and wrap everything in HTML tags
+
+[1:01:28]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=3688)
+Adding use client directive and styling logo
+- Use use client directive to fix component issue
+- Style logo with ALT tag, width, height, and class name
+
+[1:07:53]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=4073)
+Create mobile navigation bar with profile icon and links
+- Use useState hook to create toggleDropDown state
+- Render dropdown div and links when toggleDropDown is true
+
+[1:21:10]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=4870)
+Create OAuth client ID and secret for Google authentication
+- Create and configure OAuth client ID and secret in Google Cloud Console
+- Add client ID and secret to .env file and use them in code
+
+[1:28:00]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=5280)
+Create a MongoDB database and connect to it in a Next.js app
+- Head to mongodb.com and create a free cluster, then add IP address and get the MongoDB URI
+- Create a user model using Mongoose and check if it already exists before creating a new one
+
+[1:41:00]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=6060)
+Successfully set up Next API authentication with Google
+- Added authorized redirect URIs to Google Cloud console
+- Replaced logo with user profile icon from session data
+
+[1:47:45]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=6465)
+Creating a create prompt page
+- Importing hooks and components for the page
+- Setting up the form and passing necessary props
+
+[2:01:14]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=7274)
+Create a new API endpoint for prompts
+- Create a new folder within the API folder called prompt and a new file called route.js
+- Define the route type as post, grab the data passed through the post request, connect to the DB, and create a new prompt
+
+[2:07:38]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=7658)
+Successfully created a new prompt in the database
+- Used Mongoose and MongoDB to define the prompt schema and save it to the database
+- Implemented a route in Next.js to handle the creation of a new prompt and display it in the feed
+
+[2:20:43]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=8443)
+Creating and fetching prompts using xjs
+- Create a new route.js file and import necessary modules
+- Export an async function to get requests, connect to DB, filter prompts, and return a response
+
+[2:27:39]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=8859)
+Implementing copy to clipboard functionality
+- Create handleCopy function to copy post.prompt to clipboard
+- Set state to show check mark and reset after 3 seconds
+
+[2:40:50]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=9650)
+Developed profile component with live reload functionality
+- Added class names and elements to profile page
+- Implemented handle edit and handle delete functions
+
+[2:47:17]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=10037)
+Adding API endpoints for edit and delete
+- Create a new route.js file with three different types of requests: get, patch, and delete
+- The get request is used to read one specific prompt, the patch request is used to update a prompt, and the delete request is used to delete a prompt
+- Each request has its own set of parameters and logic to handle the specific action
+
+[3:00:41]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=10841)
+Successfully implemented full CRUD functionality for posts
+- Implemented create, read, update, and delete operations for posts
+- Used Next.js for front-end and back-end development
+
+[00:24]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=24)
+Learn how to implement search, click on tags, and view other profiles in a JSM masterclass project.
+- Implement search and click on tags within the feed component by filtering prompts based on queries.
+- Create a new file or folder within the profile directory to view other profiles and fetch posts from a different user.
+- Deploy the project to the web using Next.js.
+
+[3:19:33]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=11973)
+Share your work online to gain recognition and job opportunities.
+- Sharing your work can help you build your portfolio and demonstrate your skills to potential employers or clients.
+- Sharing your work can also help you receive feedback, improve your skills, and gain recognition on social media, potentially leading to job opportunities.
+
+[3:25:41]
+(https://www.youtube.com/watch?v=wm5gMKuwSYk&t=12341)
+Explore JS13 and React/Next.js courses on jsmastery.pro
+- JSM masterclass experience offers a six-month boot camp with expert mentors
+- Get a job in Tech with JSM masterclass experience
