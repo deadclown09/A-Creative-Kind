@@ -23,19 +23,19 @@ export const Feed = () => {
   }, []);
 
   return (
-    <section className="flex flex-col items-start justify-center gap-6 w-full mb-10">
-      <form className="w-full md:px-32">
+    <section className="mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2 mb-10">
+      <form className="w-full ">
         <input
           type="text"
           value={searchText}
-          className="w-full px-6 py-4 font-medium text-lg text-zinc-700 rounded-full shadow-lg my-4"
+          className="w-full px-6 py-3 font-medium text-zinc-700 rounded-full shadow-lg my-4"
           onChange={handleSearchChange}
           placeholder="Search for quotes or tags"
           required
         />
       </form>
 
-      <div className="w-full flex justify-evenly items-start flex-wrap ">
+      <div className="space-y-6 py-8 sm:columns-2 sm:gap-6 lg:columns-3">
         {posts.map((post: PostType) => (
           <PostCard
             key={post._id}

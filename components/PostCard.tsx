@@ -42,8 +42,8 @@ const PostCard = ({
   };
 
   return (
-    <div className="w-full md:w-[45%] flex flex-col gap-4 bg-gradient-to-br from-white to-zinc-200 rounded-md p-6 m-3">
-      <div className="flex justify-between items-center">
+    <div className="flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit;">
+      <div className="flex justify-between items-center mb-3">
         <div className="flex justify-start items-center gap-3">
           <Image
             src={post.creator.image}
