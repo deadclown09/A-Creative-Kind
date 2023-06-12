@@ -26,7 +26,7 @@ const PostCard = ({
   handleDelete,
 }: {
   post: PostType;
-  handleTagClick?: () => void;
+  handleTagClick?: (e: any) => void;
   handleEdit?: (post: PostType) => void;
   handleDelete?: (post: PostType) => void;
 }) => {
@@ -70,7 +70,7 @@ const PostCard = ({
         </p>
         <span className="w-full flex justify-between items-center">
           <span
-            className="bg-gray-300 rounded-full px-4 py-1 text-blue-500 text-sm font-medium"
+            className="bg-gray-300 rounded-full px-4 py-1 text-blue-500 text-sm font-medium cursor-pointer"
             onClick={handleTagClick}
           >
             {post.tag}
