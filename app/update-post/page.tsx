@@ -19,6 +19,8 @@ const UpdatePost = () => {
     e.preventDefault();
     setLoading(true);
 
+    if (!postId) alert("Missing Post ID!");
+
     try {
       const response = await fetch(`/api/post/${postId}`, {
         method: "PATCH",
