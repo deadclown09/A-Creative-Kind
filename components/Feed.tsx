@@ -4,11 +4,26 @@ import { ChangeEvent, useEffect, useState } from "react";
 import PostCard, { PostType } from "./PostCard";
 
 export const Feed = () => {
-  const [searchText, setSearchText] = useState("");
   const [posts, setPosts] = useState([]);
+  const [searchText, setSearchText] = useState("");
+  const [filteredPosts, setFilteredPosts] = useState([]);
+  console.log(searchText);
 
   const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setSearchText(e.target.value);
+    const inputText = e.target.value;
+    const regex = new RegExp(inputText, "i");
+
+    setFilteredPosts(
+      inputText
+        ? posts.filter(
+            (post: PostType) =>
+              regex.test(post.quote) ||
+              regex.test(post.tag) ||
+              regex.test(post.creator.email)
+          )
+        : posts
+    );
+    setSearchText(inputText);
   };
 
   const handleTagClick = () => {};
@@ -18,6 +33,7 @@ export const Feed = () => {
       const response = await fetch("/api/post");
       const data = await response.json();
       setPosts(data);
+      setFilteredPosts(data);
     };
     fetchPosts();
   }, []);
@@ -35,8 +51,8 @@ export const Feed = () => {
         />
       </form>
 
-      <div className="space-y-6 py-8 sm:columns-2 sm:gap-6 lg:columns-3">
-        {posts.map((post: PostType) => (
+      <div className="space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3">
+        {filteredPosts.map((post: PostType) => (
           <PostCard
             key={post._id}
             post={post}
