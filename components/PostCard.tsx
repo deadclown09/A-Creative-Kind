@@ -5,10 +5,11 @@ import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import { useState } from "react";
 import { LuCopy, LuCopyCheck, LuEdit, LuTrash } from "react-icons/lu";
+import { SessionType } from "./Provider";
 
 export interface PostType {
   creator: {
-    id: string;
+    _id: string;
     email: string;
     username: string;
     image: string;
@@ -30,7 +31,8 @@ const PostCard = ({
   handleDelete?: (post: PostType) => void;
 }) => {
   const [copied, setCopied] = useState("");
-  const { data: session } = useSession();
+  const { data } = useSession();
+  const session = data as SessionType;
   const pathname = usePathname();
 
   const handleCopy = () => {

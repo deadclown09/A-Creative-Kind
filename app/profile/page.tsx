@@ -2,13 +2,15 @@
 
 import { PostType } from "@components/PostCard";
 import Profile from "@components/Profile";
+import { SessionType } from "@components/Provider";
 import { connectToDB } from "@utils/database";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 
 const ProfilePage = () => {
-  const { data: session } = useSession();
+  const { data } = useSession();
+  const session = data as SessionType;
   const router = useRouter();
   const [posts, setPosts] = useState([]);
 
@@ -25,7 +27,9 @@ const ProfilePage = () => {
           method: "DELETE",
         });
 
-        const filteredPosts = posts.filter((item) => item._id !== post._id);
+        const filteredPosts = posts.filter(
+          (item: PostType) => item._id !== post._id
+        );
         setPosts(filteredPosts);
       } catch (error) {
         console.error(error);

@@ -4,9 +4,12 @@ import { FormEvent, useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Form from "@components/Form";
+import { SessionType } from "@components/Provider";
 
 const CreatePost = () => {
-  const { data: session } = useSession();
+  const { data } = useSession();
+  const session = data as SessionType;
+
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [post, setPost] = useState<{ quote: string; tag: string }>({
