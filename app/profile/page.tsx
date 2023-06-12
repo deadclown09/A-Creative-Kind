@@ -1,5 +1,6 @@
 "use client";
 
+import { PostType } from "@components/PostCard";
 import Profile from "@components/Profile";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -10,7 +11,9 @@ const ProfilePage = () => {
   const router = useRouter();
   const [posts, setPosts] = useState([]);
 
-  const handleEdit = () => {};
+  const handleEdit = (post: PostType) => {
+    router.push(`/update-post?id=${post._id}`);
+  };
 
   const handleDelete = () => {};
 

@@ -10,8 +10,8 @@ const Profile = ({
   name: string;
   desc: string;
   data: any;
-  handleEdit: () => void;
-  handleDelete: () => void;
+  handleEdit: (post: PostType) => void;
+  handleDelete: (post: PostType) => void;
 }) => {
   return (
     <section className="flex flex-col gap-3 w-full pt-10 mb-10">

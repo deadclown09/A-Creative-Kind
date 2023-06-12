@@ -26,13 +26,12 @@ const PostCard = ({
 }: {
   post: PostType;
   handleTagClick?: () => void;
-  handleEdit?: () => void;
-  handleDelete?: () => void;
+  handleEdit?: (post: PostType) => void;
+  handleDelete?: (post: PostType) => void;
 }) => {
   const [copied, setCopied] = useState("");
   const { data: session } = useSession();
   const pathname = usePathname();
-  const router = useRouter();
 
   const handleCopy = () => {
     setCopied(post.quote);
@@ -41,7 +40,7 @@ const PostCard = ({
   };
 
   return (
-    <div className="w-full md:w-[45%] flex flex-col gap-4 bg-gradient-to-br from-white to-zinc-200 rounded-md p-6">
+    <div className="w-full md:w-[45%] flex flex-col gap-4 bg-gradient-to-br from-white to-zinc-200 rounded-md p-6 m-3">
       <div className="flex justify-between items-center">
         <div className="flex justify-start items-center gap-3">
           <Image
@@ -82,13 +81,13 @@ const PostCard = ({
                   size={20}
                   color="#498AF3"
                   className="cursor-pointer"
-                  onClick={handleEdit}
+                  onClick={() => handleEdit?.(post)}
                 />
                 <LuTrash
                   size={20}
                   color="red"
                   className="cursor-pointer"
-                  onClick={handleDelete}
+                  onClick={() => handleDelete?.(post)}
                 />
               </span>
             )}

@@ -45,7 +45,7 @@ const CreatePost = () => {
         etc.
       </p>
       <Form
-        type="CREATE"
+        type="Create"
         post={post}
         setPost={setPost}
         loading={loading}

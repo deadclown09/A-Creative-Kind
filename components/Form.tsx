@@ -66,7 +66,7 @@ const Form = ({
           type="submit"
           className="primary_btn bg-gradient-to-r from-blue-600 to-cyan-600 min-w-[100px]"
         >
-          {loading ? <Loader /> : "Submit"}
+          {loading ? <Loader /> : type}
         </button>
       </div>
     </form>
