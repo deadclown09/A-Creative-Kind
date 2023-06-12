@@ -1,8 +1,10 @@
 "use client";
 
+import { useSession } from "next-auth/react";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import { useState } from "react";
-import { LuCopy, LuCopyCheck } from "react-icons/lu";
+import { LuCopy, LuCopyCheck, LuEdit, LuTrash } from "react-icons/lu";
 
 export interface PostType {
   creator: {
@@ -19,11 +21,18 @@ export interface PostType {
 const PostCard = ({
   post,
   handleTagClick,
+  handleEdit,
+  handleDelete,
 }: {
   post: PostType;
-  handleTagClick: () => void;
+  handleTagClick?: () => void;
+  handleEdit?: () => void;
+  handleDelete?: () => void;
 }) => {
   const [copied, setCopied] = useState("");
+  const { data: session } = useSession();
+  const pathname = usePathname();
+  const router = useRouter();
 
   const handleCopy = () => {
     setCopied(post.quote);
@@ -58,8 +67,31 @@ const PostCard = ({
         <p className="text-sm font-medium text-zinc-700 text-justify">
           {post.quote}
         </p>
-        <span className="px-4 py-1 rounded-full font-medium bg-gray-300 text-sm text-blue-500">
-          {post.tag}
+        <span className="w-full flex justify-between items-center">
+          <span
+            className="bg-gray-300 rounded-full px-4 py-1 text-blue-500 text-sm font-medium"
+            onClick={handleTagClick}
+          >
+            {post.tag}
+          </span>
+
+          {session?.user?.id === post.creator._id &&
+            pathname === "/profile" && (
+              <span className="flex items-center gap-2 justify-end">
+                <LuEdit
+                  size={20}
+                  color="#498AF3"
+                  className="cursor-pointer"
+                  onClick={handleEdit}
+                />
+                <LuTrash
+                  size={20}
+                  color="red"
+                  className="cursor-pointer"
+                  onClick={handleDelete}
+                />
+              </span>
+            )}
         </span>
       </div>
     </div>
