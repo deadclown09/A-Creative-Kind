@@ -34,7 +34,7 @@ const Nav = () => {
     <nav className="flex justify-between items-center w-full pt-4 mb-6">
       <Link href="/" className="flex items-center gap-3">
         <Image
-          src="/assets/images/logo.svg"
+          src="/assets/icons/icon.png"
           alt="A Creative Kind Logo"
           width={30}
           height={30}
