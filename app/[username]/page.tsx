@@ -8,7 +8,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 
-const ProfilePage = () => {
+const ProfilePage = ({ params }: { params: { username: string } }) => {
   const { data } = useSession();
   const session = data as SessionType;
   const router = useRouter();
@@ -39,7 +39,7 @@ const ProfilePage = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await fetch(`/api/users/${session?.user?.id}/posts`);
+      const response = await fetch(`/api/users/${params.username}/posts`);
       const data = await response.json();
 
       setPosts(data);

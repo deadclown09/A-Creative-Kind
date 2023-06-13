@@ -21,6 +21,7 @@ const Nav = () => {
     LiteralUnion<BuiltInProviderType>,
     ClientSafeProvider
   > | null>();
+  console.log(session?.user?.name);
 
   useEffect(() => {
     const setProviders = async () => {
@@ -57,7 +58,7 @@ const Nav = () => {
               Sign out
             </button>
 
-            <Link href="/profile">
+            <Link href={`/${session?.user?.name}`}>
               <Image
                 src={session.user.image || "/assets/images/profile.svg"}
                 alt="User profile"
@@ -100,7 +101,7 @@ const Nav = () => {
             {mobileNav && (
               <div className="dropdown" onClick={() => setMobileNav(false)}>
                 <Link
-                  href="profile"
+                  href={`/${session?.user?.name}`}
                   onClick={() => setMobileNav(false)}
                   className="dropdown_link"
                 >

@@ -34,6 +34,7 @@ const PostCard = ({
   const { data } = useSession();
   const session = data as SessionType;
   const pathname = usePathname();
+  const router = useRouter();
 
   const handleCopy = () => {
     setCopied(post.quote);
@@ -44,7 +45,10 @@ const PostCard = ({
   return (
     <div className="flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit;">
       <div className="flex justify-between items-center mb-3">
-        <div className="flex justify-start items-center gap-3">
+        <div
+          className="flex justify-start items-center gap-3 cursor-pointer"
+          onClick={() => router.push(`/${post.creator.username}`)}
+        >
           <Image
             src={post.creator.image}
             alt={post.creator.username}
