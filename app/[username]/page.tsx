@@ -46,12 +46,16 @@ const ProfilePage = ({ params }: { params: { username: string } }) => {
     };
 
     if (session?.user?.id) fetchPosts();
-  }, []);
+  }, [session]);
 
   return (
     <Profile
-      name="My"
-      desc="Welcome to your personalized profile page"
+      name={params.username + "'s"}
+      desc={`Welcome to ${
+        session?.user?.name === params.username
+          ? "your"
+          : params.username + "'s"
+      } personalized profile page`}
       data={posts}
       handleEdit={handleEdit}
       handleDelete={handleDelete}

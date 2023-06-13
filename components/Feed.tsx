@@ -48,7 +48,7 @@ export const Feed = () => {
         />
       </form>
 
-      <div className="space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3">
+      <div className="posts-layout">
         {filteredPosts.map((post: PostType) => (
           <PostCard
             key={post._id}
