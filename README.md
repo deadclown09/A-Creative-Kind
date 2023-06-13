@@ -8,8 +8,7 @@ A NextJS CRUD application to discover and share quotes with others
 
 **(You know I become too lazy sometimes)**
 
-- Implement search functionality
-- Make tags clickable and searchable
-- User's profile viewable
+- ~~Implement search functionality~~
+- ~~Make tags clickable and searchable~~
+- ~~User's profile viewable~~
 - Add dark mode
-- Username changeable
