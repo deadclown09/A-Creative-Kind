@@ -45,7 +45,7 @@ const ProfilePage = ({ params }: { params: { username: string } }) => {
       setPosts(data);
     };
 
-    if (session?.user?.id) fetchPosts();
+    fetchPosts();
   }, [session]);
 
   return (

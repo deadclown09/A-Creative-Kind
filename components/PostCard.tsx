@@ -81,7 +81,7 @@ const PostCard = ({
           </span>
 
           {session?.user?.id === post.creator._id &&
-            pathname === "/profile" && (
+            pathname === `/${session.user.name}` && (
               <span className="flex items-center gap-2 justify-end">
                 <LuEdit
                   size={20}
@@ -91,7 +91,7 @@ const PostCard = ({
                 />
                 <LuTrash
                   size={20}
-                  color="red"
+                  color="#FF5E5E"
                   className="cursor-pointer"
                   onClick={() => handleDelete?.(post)}
                 />
